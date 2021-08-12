@@ -7,7 +7,7 @@ body{
     height: 95vh;
     min-height: 400px;
     font-family: 'Varela Round', sans-serif;
-    margin: 0;
+    margin: 10px 0 0;
 }
 section{
     position: absolute;
@@ -53,12 +53,15 @@ section{
 }
 .cell{
     color: rgb(0, 0, 139);
-    font-size: 10vmax;
+    font-size: 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
+}
+@media screen and (min-width:1600px) {
+    .cell{ font-size: 150px;}
 }
 .cell::after{
     content: '';

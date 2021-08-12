@@ -27,7 +27,8 @@ cell.forEach(element => {
 function ticTacToe(event) {
     console.log(event);
     if (player == 0) {
-        event.target.innerHTML = 'O';
+        // event.target.innerHTML = 'O';
+        this.innerHTML = 'O';
         player = 1;
     }
     else if (player == 1) {
