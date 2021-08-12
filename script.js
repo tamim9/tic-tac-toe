@@ -96,6 +96,6 @@ function findWinner() {
             if (typeof threeCells[i] != 'undefined') { emptyCells++ }
         }
     }
-    if (emptyCells == 9) { window.confirm('Draw'); location.reload() }
+    if (emptyCells == 9) { window.confirm('Match Drawn'); location.reload() }
     whoseTurn();
 }
