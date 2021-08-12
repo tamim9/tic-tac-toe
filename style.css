@@ -4,10 +4,10 @@
 body{
     position: absolute;
     width: 100vw;
-    height: 95vh;
+    height:95vh;
     min-height: 400px;
     font-family: 'Varela Round', sans-serif;
-    margin: 10px 0 0;
+    margin: 0;
 }
 section{
     position: absolute;
@@ -22,6 +22,7 @@ section{
     font-size: 30px;
     letter-spacing: 5px;
     font-weight: bold;
+    padding-top: 10px;
 }
 .container{
     max-width: 600px;

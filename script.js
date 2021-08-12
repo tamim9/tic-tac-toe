@@ -24,18 +24,19 @@ cell.forEach(element => {
     element.addEventListener('click', ticTacToe);
 })
 
-function ticTacToe(event) {
-    console.log(event);
+function ticTacToe() {
     if (player == 0) {
-        // event.target.innerHTML = 'O';
         this.innerHTML = 'O';
+        this.removeEventListener('click', ticTacToe);
         player = 1;
     }
     else if (player == 1) {
-        event.target.innerHTML = 'X';
+        this.innerHTML = 'X';
+        this.removeEventListener('click', ticTacToe);
         player = 0;
     }
-    changeCellValueArray();
+    whoseTurn();
+    setTimeout(changeCellValueArray, 2000);
 }
 
 function changeCellValueArray() {
@@ -52,6 +53,7 @@ function changeCellValueArray() {
     for (let i = 6; i < 9; i++) {
         if (cell[i].innerHTML != '') {
             third3CellValue[i - 6] = cell[i].innerText;
+            console.log(cell[i].innerHTML != '')
         }
     }
     findWinner();
@@ -98,5 +100,4 @@ function findWinner() {
         }
     }
     if (emptyCells == 9) { window.confirm('Match Drawn'); location.reload() }
-    whoseTurn();
 }
